@@ -40,8 +40,8 @@ function Contact({ pageInfo }: Props) {
 
       <div className="flex flex-col space-y-4 xl:space-y-10 px-5">
         <h4 className="text-4xl font-semibold text-center">
-          I have got just what you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk</span>
+          Yes, you can{" "}
+          <span className="decoration-[#F7AB0A]/50 underline">talk</span> to me
         </h4>
 
         <div className="space-y-2">

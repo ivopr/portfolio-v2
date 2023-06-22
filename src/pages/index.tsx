@@ -97,7 +97,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         skills: skills ?? [],
         socials: socials ?? [],
       },
-      revalidate: 60 * 30,
+      revalidate: process.env.NODE_ENV === "development" ? 5 : 60 * 30,
     };
   } catch {
     return {
@@ -108,7 +108,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         skills: [] as Skill[],
         socials: [] as Social[],
       },
-      revalidate: 60 * 30,
+      revalidate: process.env.NODE_ENV === "development" ? 5 : 60 * 30,
     };
   }
 };

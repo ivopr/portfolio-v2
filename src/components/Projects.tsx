@@ -41,7 +41,7 @@ function Projects({ projects }: Props) {
               >
                 <Image
                   alt=""
-                  className="h-fit w-2/3"
+                  className="h-fit w-full"
                   height={768}
                   src={urlForImage(project?.image).url()}
                   width={1024}
@@ -49,7 +49,20 @@ function Projects({ projects }: Props) {
               </motion.div>
             ) : null}
 
-            <div className="space-y-4 xl:space-y-10 px-0 md:px-10">
+            <div className="space-y-4 xl:space-y-6 px-0 md:px-10">
+              <div className="flex space-x-2 space-y-2 items-center flex-wrap justify-center">
+                {project?.technologies?.map((tech) => (
+                  <Image
+                    alt=""
+                    className="rounded-full border border-gray-500 p-1 h-12 w-12 object-contain"
+                    key={tech._id}
+                    height={80}
+                    src={urlForImage(tech?.image).url()}
+                    title={tech?.title}
+                    width={80}
+                  />
+                ))}
+              </div>
               <h4 className="text-xl xl:text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case study {index + 1} of {projects?.length}:

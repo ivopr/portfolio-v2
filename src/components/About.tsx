@@ -50,7 +50,7 @@ function About({ pageInfo }: Props) {
         ) : null}
 
         <div className="space-y-4 px-0 md:px-4">
-          <h4 className="text-4xl font-semibold text-center">
+          <h4 className="text-4xl font-semibold text-center md:text-left">
             Here is a{" "}
             <span className="underline decoration-[#F7A80A]/50">little</span>{" "}
             background
