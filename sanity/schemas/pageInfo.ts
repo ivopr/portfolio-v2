@@ -24,7 +24,7 @@ export default defineType({
     defineField({
       name: "backgroundInformation",
       title: "Background Information",
-      type: "string",
+      type: "text",
     }),
     defineField({
       name: "profilePic",
@@ -33,11 +33,6 @@ export default defineType({
       options: {
         hotspot: true,
       },
-    }),
-    defineField({
-      name: "phoneNumber",
-      title: "Phone Number",
-      type: "string",
     }),
     defineField({
       name: "email",

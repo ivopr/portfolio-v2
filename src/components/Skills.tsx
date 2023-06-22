@@ -30,8 +30,12 @@ function Skills({ skills }: Props) {
       </h3>
 
       <div className="grid grid-flow-row grid-cols-4 gap-5 px-4">
-        {skills.map((skill) => (
-          <Skill key={skill._id} skill={skill} />
+        {skills?.map((skill, index) => (
+          <Skill
+            key={skill?._id}
+            skill={skill}
+            directionLeft={index + 1 <= skills?.length / 2}
+          />
         ))}
       </div>
     </motion.div>

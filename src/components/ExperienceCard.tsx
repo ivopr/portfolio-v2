@@ -22,13 +22,13 @@ function ExperienceCard({ experience }: Props) {
           alt=""
           className="h-24 w-24 rounded-full object-cover object-center"
           height={96}
-          src={urlForImage(experience.companyImage).url()}
+          src={urlForImage(experience?.companyImage).url()}
           width={96}
         />
       </motion.div>
 
-      <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
-      <p className="font-bold text-2xl mt-1">{experience.company}</p>
+      <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
+      <p className="font-bold text-2xl mt-1">{experience?.company}</p>
       <div className="flex space-x-2 my-2">
         {experience.technologies.map((tech) => (
           <Image
@@ -36,7 +36,7 @@ function ExperienceCard({ experience }: Props) {
             className="h-10 w-10 rounded-full object-cover object-center"
             height={40}
             key={tech._id}
-            src={urlForImage(tech.image).url()}
+            src={urlForImage(tech?.image).url()}
             width={40}
           />
         ))}
@@ -44,17 +44,17 @@ function ExperienceCard({ experience }: Props) {
       <p className="uppercase py-5 text-gray-300">
         {Intl.DateTimeFormat("en-US", {
           dateStyle: "long",
-        }).format(new Date(experience.dateStarted))}{" "}
+        }).format(new Date(experience?.dateStarted))}{" "}
         -{" "}
-        {experience.isCurrentlyWorkingHere
+        {experience?.isCurrentlyWorkingHere
           ? "Present"
           : Intl.DateTimeFormat("en-US", {
               dateStyle: "long",
-            }).format(new Date(experience.dateEnded))}
+            }).format(new Date(experience?.dateEnded))}
       </p>
       <div className="h-full overflow-y-scroll">
         <ul className="list-disc space-y-1 ml-5 text-lg">
-          {experience.points.map((point) => (
+          {experience?.points?.map((point) => (
             <li key={point}>{point}</li>
           ))}
         </ul>

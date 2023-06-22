@@ -18,7 +18,7 @@ function Contact({ pageInfo }: Props) {
   const { handleSubmit, register } = useForm<ContactFormInput>();
 
   function onSubmit({ email, message, name, subject }: ContactFormInput) {
-    window.location.href = `mailto:${pageInfo.email}?subject=${subject}&body=Hi, my name is ${name}. ${message} (${email})`;
+    window.location.href = `mailto:${pageInfo?.email}?subject=${subject}&body=Hi, my name is ${name}. ${message} (${email})`;
   }
 
   return (

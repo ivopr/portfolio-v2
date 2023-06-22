@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  @apply scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin
+  @apply scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin scroll-smooth;
 }
 
 @layer components {

@@ -30,7 +30,7 @@ export default defineType({
     defineField({
       name: "linkTo",
       title: "Link To",
-      type: "text",
+      type: "url",
     }),
   ],
 });

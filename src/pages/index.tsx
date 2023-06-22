@@ -72,10 +72,10 @@ export default function Home({
       </section>
 
       <Link
-        className="absolute right-10 bg-black/50 p-4 bottom-4 rounded-sm h-7 w-7"
+        className="absolute flex items-center justify-center right-10 bg-black/50 p-2 bottom-4 rounded-sm h-10 w-10"
         href="#hero"
       >
-        <ChevronDoubleUpIcon />
+        <ChevronDoubleUpIcon className="h-full w-full" />
       </Link>
     </div>
   );
@@ -87,6 +87,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const projects = await fetchProjects();
   const skills = await fetchSkills();
   const socials = await fetchSocials();
+
+  console.log({ experiences, pageInfo, projects, skills, socials });
 
   return {
     props: {

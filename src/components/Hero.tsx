@@ -1,6 +1,5 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import Image from "next/image";
 import Link from "next/link";
 
 import { urlForImage } from "../../sanity/lib/image";
@@ -20,19 +19,10 @@ function Hero({ pageInfo }: Props) {
 
   return (
     <div className="relative h-[calc(100vh-3rem)] w-full flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      <div className="absolute top-[35.5%] md:top-[40%]">
-        <BackgroundCircles />
-      </div>
-      <Image
-        className="relative rounded-full h-48 w-48 mx-auto object-cover"
-        src={urlForImage(pageInfo?.heroImage).url()}
-        height={192}
-        width={192}
-        alt=""
-      />
+      <BackgroundCircles image={urlForImage(pageInfo?.heroImage).url()} />
       <div className="z-20 w-full px-4">
         <h2 className="text-xs font-mono uppercase text-gray-500 pb-2 tracking-[10px]">
-          {pageInfo.role}
+          {pageInfo?.role}
         </h2>
         <h1 className="text-2xl lg:text-6xl font-semibold px-10">
           <span>{text}</span>
