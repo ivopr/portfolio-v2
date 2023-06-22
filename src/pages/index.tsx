@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { ChevronDoubleUpIcon } from "@heroicons/react/24/solid";
 import { GetStaticProps } from "next";
 import Link from "next/link";
@@ -33,8 +33,8 @@ export default function Home({
 }: Props) {
   const { updateSocials } = useSocials();
 
-  useLayoutEffect(() => {
-    if (socials.length > 0) {
+  useEffect(() => {
+    if (socials?.length > 0) {
       updateSocials(socials);
     }
   }, [socials, updateSocials]);
@@ -82,22 +82,33 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const experiences = await fetchExperiences();
-  const pageInfo = await fetchPageInfo();
-  const projects = await fetchProjects();
-  const skills = await fetchSkills();
-  const socials = await fetchSocials();
+  try {
+    const experiences = await fetchExperiences();
+    const pageInfo = await fetchPageInfo();
+    const projects = await fetchProjects();
+    const skills = await fetchSkills();
+    const socials = await fetchSocials();
 
-  console.log({ experiences, pageInfo, projects, skills, socials });
-
-  return {
-    props: {
-      experiences,
-      pageInfo,
-      projects,
-      skills,
-      socials,
-    },
-    revalidate: 60 * 30,
-  };
+    return {
+      props: {
+        experiences: experiences ?? [],
+        pageInfo: pageInfo ?? {},
+        projects: projects ?? [],
+        skills: skills ?? [],
+        socials: socials ?? [],
+      },
+      revalidate: 60 * 30,
+    };
+  } catch {
+    return {
+      props: {
+        experiences: [] as Experience[],
+        pageInfo: {} as PageInfo,
+        projects: [] as Project[],
+        skills: [] as Skill[],
+        socials: [] as Social[],
+      },
+      revalidate: 60 * 30,
+    };
+  }
 };

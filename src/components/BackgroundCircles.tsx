@@ -23,13 +23,15 @@ function BackgroundCircles({ image }: Props) {
       <div className="absolute border border-[#333333] rounded-full h-72 w-72 animate-ping" />
       <div className="absolute border border-[#F7AB0A]/20 rounded-full h-80 w-80 animate-pulse" />
       <div className="absolute border border-[#333333] rounded-full h-96 w-96 animate-ping" />
-      <Image
-        className="rounded-full h-48 w-48 object-cover z-40"
-        src={image}
-        height={192}
-        width={192}
-        alt=""
-      />
+      {image ? (
+        <Image
+          className="rounded-full h-48 w-48 object-cover z-40"
+          src={image}
+          height={192}
+          width={192}
+          alt=""
+        />
+      ) : null}
     </motion.div>
   );
 }

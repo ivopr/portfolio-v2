@@ -24,7 +24,6 @@ declare global {
     _type: "pageInfo";
     backgroundInformation: string;
     email: string;
-    phoneNumber: string;
     role: string;
     heroImage: Image;
     name: string;

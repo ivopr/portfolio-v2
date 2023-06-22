@@ -19,7 +19,11 @@ function Hero({ pageInfo }: Props) {
 
   return (
     <div className="relative h-[calc(100vh-3rem)] w-full flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      <BackgroundCircles image={urlForImage(pageInfo?.heroImage).url()} />
+      <BackgroundCircles
+        image={
+          pageInfo?.heroImage ? urlForImage(pageInfo?.heroImage).url() : ""
+        }
+      />
       <div className="z-20 w-full px-4">
         <h2 className="text-xs font-mono uppercase text-gray-500 pb-2 tracking-[10px]">
           {pageInfo?.role}

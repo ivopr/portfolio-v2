@@ -31,21 +31,23 @@ function Projects({ projects }: Props) {
             className="w-full flex-shrink-0 snap-center overflow-y-hidden flex flex-col space-y-5 items-center justify-center p-4 xl:p-20"
             key={project?._id}
           >
-            <motion.div
-              initial={{ y: -50, opacity: 0 }}
-              transition={{ duration: 1.2 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="h-fit w-2/3"
-            >
-              <Image
-                alt=""
+            {project?.image ? (
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                transition={{ duration: 1.2 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="h-fit w-2/3"
-                height={768}
-                src={urlForImage(project?.image).url()}
-                width={1024}
-              />
-            </motion.div>
+              >
+                <Image
+                  alt=""
+                  className="h-fit w-2/3"
+                  height={768}
+                  src={urlForImage(project?.image).url()}
+                  width={1024}
+                />
+              </motion.div>
+            ) : null}
 
             <div className="space-y-4 xl:space-y-10 px-0 md:px-10">
               <h4 className="text-xl xl:text-4xl font-semibold text-center">
