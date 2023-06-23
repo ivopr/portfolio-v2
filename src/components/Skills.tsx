@@ -10,7 +10,7 @@ type Props = {
 function Skills({ skills }: Props) {
   return (
     <motion.div
-      className="relative h-[calc(100vh-3rem)] flex flex-col items-center overflow-hidden"
+      className="h-screen pt-14 flex flex-col items-center overflow-hidden"
       initial={{
         opacity: 0,
       }}

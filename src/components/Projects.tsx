@@ -11,7 +11,7 @@ type Props = {
 function Projects({ projects }: Props) {
   return (
     <motion.div
-      className="relative h-[calc(100vh-3rem)] flex w-full flex-col items-center overflow-hidden"
+      className="relative h-screen pt-14 flex w-full flex-col items-center overflow-hidden"
       initial={{
         opacity: 0,
       }}

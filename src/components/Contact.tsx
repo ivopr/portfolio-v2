@@ -23,7 +23,7 @@ function Contact({ pageInfo }: Props) {
 
   return (
     <motion.div
-      className="h-[calc(100vh-3rem)] flex flex-col space-y-10 items-center"
+      className="h-screen pt-14 flex flex-col space-y-4 xl:space-y-10 items-center"
       initial={{
         opacity: 0,
       }}

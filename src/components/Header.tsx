@@ -3,13 +3,13 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { useSocials } from "@/contexts/Social";
+type Props = {
+  socials: Social[];
+};
 
-export default function Header() {
-  const { socials } = useSocials();
-
+export default function Header({ socials }: Props) {
   return (
-    <header className="flex h-12 items-start justify-between w-full xl:px-56 xl:items-center">
+    <header className="fixed top-0 flex h-12 items-start justify-between w-full xl:px-56 xl:items-center">
       <motion.div
         className="flex flex-row items-center"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}

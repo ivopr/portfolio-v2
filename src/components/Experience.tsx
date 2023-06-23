@@ -10,7 +10,7 @@ type Props = {
 function Experience({ experiences }: Props) {
   return (
     <motion.div
-      className="h-[calc(100vh-3rem)] flex flex-col items-center"
+      className="h-screen pt-14 flex flex-col items-center"
       initial={{
         opacity: 0,
       }}

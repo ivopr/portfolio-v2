@@ -23,7 +23,7 @@ function Hero({ pageInfo }: Props) {
   });
 
   return (
-    <div className="relative h-[calc(100vh-3rem)] w-full flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="h-screen pt-14 w-full flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles
         image={
           pageInfo?.heroImage ? urlForImage(pageInfo?.heroImage).url() : ""
@@ -33,7 +33,7 @@ function Hero({ pageInfo }: Props) {
         <h2 className="text-xs font-mono uppercase text-gray-500 pb-2 tracking-[10px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-2xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-xl lg:text-6xl font-semibold px-10">
           <span>{text}</span>
           <Cursor cursorColor="#F7A80A" />
         </h1>

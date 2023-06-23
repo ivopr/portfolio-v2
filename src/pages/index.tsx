@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { ChevronDoubleUpIcon } from "@heroicons/react/24/solid";
 import { GetStaticProps } from "next";
 import Link from "next/link";
@@ -6,10 +5,10 @@ import Link from "next/link";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import { useSocials } from "@/contexts/Social";
 import { fetchExperiences } from "@/utils/fetchExperiences";
 import { fetchPageInfo } from "@/utils/fetchPageInfo";
 import { fetchProjects } from "@/utils/fetchProjects";
@@ -31,16 +30,11 @@ export default function Home({
   skills,
   socials,
 }: Props) {
-  const { updateSocials } = useSocials();
-
-  useEffect(() => {
-    if (socials?.length > 0) {
-      updateSocials(socials);
-    }
-  }, [socials, updateSocials]);
-
   return (
-    <div className="flex h-full flex-col w-full flex-1 overflow-y-scroll snap-y snap-mandatory z-0">
+    <div className="h-screen bg-[rgb(36,36,36)] text-white overflow-y-scroll w-full snap-y snap-mandatory z-0">
+      {/* Header */}
+      <Header socials={socials} />
+
       {/* Hero */}
       <section className="snap-start" id="hero">
         <Hero pageInfo={pageInfo} />

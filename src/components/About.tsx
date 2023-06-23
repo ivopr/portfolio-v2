@@ -11,7 +11,7 @@ type Props = {
 function About({ pageInfo }: Props) {
   return (
     <motion.div
-      className="h-[calc(100vh-3rem)] flex flex-col items-center space-y-10"
+      className="h-screen pt-14 flex flex-col items-center space-y-4 xl:space-y-10"
       initial={{
         opacity: 0,
       }}
