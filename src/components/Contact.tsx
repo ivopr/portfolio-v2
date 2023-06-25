@@ -41,12 +41,12 @@ function Contact({ pageInfo }: Props) {
       <div className="flex flex-col space-y-4 xl:space-y-10 px-5">
         <h4 className="text-4xl font-semibold text-center">
           Yes, you can{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">talk</span> to me
+          <span className="decoration-primary/50 underline">talk</span> to me
         </h4>
 
         <div className="space-y-2">
           <div className="flex items-center space-x-5 justify-left2">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-primary h-7 w-7 animate-pulse" />
             <p className="text-xl">{pageInfo?.email}</p>
           </div>
         </div>
@@ -84,7 +84,7 @@ function Contact({ pageInfo }: Props) {
 
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-primary py-5 px-10 rounded-md text-black font-bold text-lg"
           >
             Submit
           </button>

@@ -21,7 +21,7 @@ function ExperienceCard({ experience }: Props) {
         >
           <Image
             alt=""
-            className="h-24 w-24 rounded-full object-cover object-center"
+            className="h-24 w-24 border border-primary border-opacity-25 rounded-full object-cover object-center"
             height={96}
             src={urlForImage(experience?.companyImage).url()}
             width={96}
@@ -35,7 +35,7 @@ function ExperienceCard({ experience }: Props) {
         {experience?.technologies?.map((tech) => (
           <Image
             alt=""
-            className="rounded-full border border-gray-500 p-1 h-8 w-8 object-contain"
+            className="rounded-full border border-primary border-opacity-40 p-1 h-8 w-8 object-contain"
             key={tech._id}
             height={32}
             src={urlForImage(tech?.image).url()}

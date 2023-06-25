@@ -54,7 +54,7 @@ function Projects({ projects }: Props) {
                 {project?.technologies?.map((tech) => (
                   <Image
                     alt=""
-                    className="rounded-full border border-gray-500 p-1 h-12 w-12 object-contain"
+                    className="rounded-full border border-primary border-opacity-50 p-1 h-12 w-12 object-contain"
                     key={tech._id}
                     height={80}
                     src={urlForImage(tech?.image).url()}
@@ -64,7 +64,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
               <h4 className="text-xl xl:text-4xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]/50">
+                <span className="underline decoration-primary/50">
                   Case study {index + 1} of {projects?.length}:
                 </span>{" "}
                 {project?.title}
@@ -78,7 +78,7 @@ function Projects({ projects }: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[25%] bg-[#F7AB0A]/10 left-0 h-96 -skew-y-6" />
+      <div className="w-full absolute top-[25%] bg-primary/10 left-0 h-96 -skew-y-6" />
     </motion.div>
   );
 }

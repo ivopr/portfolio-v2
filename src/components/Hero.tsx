@@ -1,8 +1,13 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Link from "next/link";
+import resolveConfig from "tailwindcss/resolveConfig";
 
 import { urlForImage } from "../../sanity/lib/image";
+
+import tailwindConfig from "@/../tailwind.config.js";
+
+const { theme } = resolveConfig(tailwindConfig);
 
 import BackgroundCircles from "@/components/BackgroundCircles";
 
@@ -35,7 +40,7 @@ function Hero({ pageInfo }: Props) {
         </h2>
         <h1 className="text-xl lg:text-6xl font-semibold px-10">
           <span>{text}</span>
-          <Cursor cursorColor="#F7A80A" />
+          <Cursor cursorColor={theme?.colors?.primary as string} />
         </h1>
         <div className="pt-5 grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl mx-auto">
           <Link className="heroButton" href="#about">
