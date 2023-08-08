@@ -7,6 +7,13 @@ declare global {
     _updatedAt: string;
   }
 
+  interface Skill extends SanityBody {
+    _type: "skill";
+    image: Image;
+    progress: number;
+    title: string;
+  }
+
   interface Experience extends SanityBody {
     _type: "experience";
     company: string;
@@ -28,13 +35,6 @@ declare global {
     heroImage: Image;
     name: string;
     profilePic: Image;
-  }
-
-  interface Skill extends SanityBody {
-    _type: "skill";
-    image: Image;
-    progress: number;
-    title: string;
   }
 
   interface Project extends SanityBody {
