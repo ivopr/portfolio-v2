@@ -3,13 +3,12 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Link from "next/link";
 import resolveConfig from "tailwindcss/resolveConfig";
 
+import tailwindConfig from "@/../tailwind.config.js";
+import BackgroundCircles from "@/components/BackgroundCircles";
+
 import { urlForImage } from "../../sanity/lib/image";
 
-import tailwindConfig from "@/../tailwind.config.js";
-
 const { theme } = resolveConfig(tailwindConfig);
-
-import BackgroundCircles from "@/components/BackgroundCircles";
 
 type Props = {
   pageInfo: PageInfo;

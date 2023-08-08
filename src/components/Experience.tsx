@@ -24,7 +24,7 @@ function Experience({ experiences }: Props) {
       <h3 className="uppercase tracking-[0.25em] text-center w-full text-gray-500 text-xl">
         Experience
       </h3>
-      <div className="pt-4 h-[calc(100%-5rem)] md:h-[calc(100%-3rem)] w-full max-w-5xl flex overflow-x-scroll snap-x snap-mandatory px-4 md:px-0 pb-0 md:pb-2 gap-4">
+      <div className="pt-4 h-[calc(100%-5rem)] md:h-[calc(100%-3rem)] w-full max-w-5xl flex overflow-x-scroll snap-x snap-mandatory items-center px-4 md:px-0 pb-0 md:pb-2 gap-4">
         {experiences.map((experience) => (
           <ExperienceCard key={experience?._id} experience={experience} />
         ))}

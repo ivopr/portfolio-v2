@@ -9,7 +9,7 @@ type Props = {
 
 export default function Header({ socials }: Props) {
   return (
-    <header className="fixed top-0 flex h-12 items-start justify-between w-full xl:px-56 xl:items-center">
+    <header className="fixed top-0 z-50 flex h-12 items-start justify-between w-full xl:px-56 xl:items-center">
       <motion.div
         className="flex flex-row items-center"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}

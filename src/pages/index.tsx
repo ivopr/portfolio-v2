@@ -31,7 +31,7 @@ export default function Home({
   socials,
 }: Props) {
   return (
-    <div className="h-screen bg-[rgb(36,36,36)] text-white overflow-y-scroll w-full snap-y snap-mandatory z-0">
+    <div className="bg-[rgb(36,36,36)] h-screen text-white overflow-y-scroll w-full snap-y snap-mandatory z-0">
       {/* Header */}
       <Header socials={socials} />
 

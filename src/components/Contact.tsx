@@ -84,7 +84,7 @@ function Contact({ pageInfo }: Props) {
 
           <button
             type="submit"
-            className="bg-primary py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-primary/80 hover:bg-primary transition-colors duration-150 py-5 px-10 rounded-md text-white font-bold text-lg"
           >
             Submit
           </button>
